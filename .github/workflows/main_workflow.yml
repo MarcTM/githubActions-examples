@@ -54,4 +54,4 @@ jobs:
         env:
           DESTINATION_PERSON: 2DAW
         with:
-          who-to-greet: ${{ DESTINATION_PERSON }}
+          who-to-greet: ${{ Env.DESTINATION_PERSON }}
