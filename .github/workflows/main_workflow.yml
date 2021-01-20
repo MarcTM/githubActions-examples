@@ -52,7 +52,7 @@ jobs:
       - name: "Environment test"
         uses: adeloyedeji/github-actions-hello@v1.0
         with:
-          who-to-greet: ${{ DESTINATION_PERSON }}
+          who-to-greet: $DESTINATION_PERSON
 
         env:
-          DESTINATION_PERSON: "2DAW"
+          DESTINATION_PERSON: 2DAW
