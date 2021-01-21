@@ -30,7 +30,8 @@ jobs:
     steps:
       - name: Download artifacts
         uses: actions/download-artifact@v2
-        with: dist-without-markdown
+        with: 
+          name: dist-without-markdown
       
       - name: Deploy artifacts on surge
         uses: dswistowski/surge-sh-action@v1
