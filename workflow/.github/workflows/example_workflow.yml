@@ -1,0 +1,25 @@
+name: Despliegue-App-React
+
+on: push
+
+jobs:
+  build-statics:
+    name: build-statics
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Builds static files
+        run: |
+          npm install
+          npm run build
+        
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist-without-markdown
+          path: |
+            dist
+            !dist/**/*.md
