@@ -223,9 +223,9 @@ module.exports = JSON.parse("[\"ac\",\"com.ac\",\"edu.ac\",\"gov.ac\",\"net.ac\"
 let core = __nccwpck_require__(2619);
 let TelegramBot = __nccwpck_require__(8413);
 
-let token = core.getInput("TokenBot");
-let chatid=core.getInput("ChatId");
-let name = core.getInput("Name");
+let token = core.getInput("telegram_bot_token");
+let chatid=core.getInput("telegram_chat_id");
+let name = core.getInput("person");
 
 let bot = new TelegramBot(token, {polling: false});
 
