@@ -207,7 +207,7 @@ const bot = new TelegramBot(token, {polling: false});
 const name = core.getInput("person");
 
 try {
-    bot.sendMessage(core.getInput("telegram_bot_token"), `Workflow ejecutado correctamente tras el último commit. Saludos ${name} \n 
+    bot.sendMessage(core.getInput("telegram_chat_id"), `Workflow ejecutado correctamente tras el último commit. Saludos ${name} \n 
             Autor: ${github.head_commit.author.name} \n
             Email Autor:${github.head_commit.author.email} \n
             Committer: ${github.head_commit.committer.name} \n 
