@@ -1,0 +1,19 @@
+name: Send telegram message
+
+on: push
+
+jobs:
+  envio-mensaje:
+    name: envio-mensaje
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Telegram message
+        uses: ./.github/actions/telegram
+        with:
+          telegram_bot_token: ${{ secrets.telegram_bot_token }}
+          telegram_chat_id: ${{ secrets.telegram_chat_id }}
+          person: 'Marc'

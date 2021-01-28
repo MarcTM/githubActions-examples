@@ -1,0 +1,20 @@
+name: 'Telegram Bot'
+description: 'Telegram bot that sends you a message when you do a push in GitHub'
+
+inputs:
+  telegram_bot_token:
+    description: 'Telegram bot token'
+    required: true
+
+  telegram_chat_id:
+    description: 'Telegram chat id'
+    required: true
+
+  person:
+    description: 'Receiver name'
+    default: 'bro'
+
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
